@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products List</title>
+</head>
+<body>
+    <h1>All Products List</h1>
+    <!-- <a href="/products/new">Add New Product</a> -->
+    <ul>
+        <% products.forEach(function(product) { %>
+            <li>
+                <a href="/products/<%= product._id %>"><%= product.name %></a> - $<%= product.price.toFixed(2) %> - <%= product.category %>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/products/new">Add new product</a>
+    
+</body>
+</html>
