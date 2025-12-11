@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Product = require("./model/product");
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/farmStand", { useNewUrlParser: true })
+  .connect("mongodb://127.0.0.1:27017/farmStand2", { useNewUrlParser: true })
   .then(() => {
     console.log("Mongo Database connected successfully");
   })

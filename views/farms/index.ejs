@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All farms List</title>
+</head>
+
+<body>
+    <h1>All farms List</h1>
+    <!-- <a href="/products/new">Add New Product</a> -->
+    <ul>
+        <% farms.forEach(function(farm) { %>
+            <li>
+                <a href="/farms/<%= farm._id %>">
+                    <%= farm.name %>
+                </a> - <%= farm.city %> - <%= farm.email %>
+            </li>
+            <% }); %>
+    </ul>
+    <a href="/farms/new">Add new farm</a>
+
+</body>
+
+</html>
