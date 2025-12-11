@@ -64,9 +64,17 @@ app.post('/farms/:id/products', async (req, res) => {
   product.farm = farm
   await farm.save()
   await product.save()
-  res.send(farm);
+  //res.send(farm);
+  res.redirect(`/products/${product._id}`)
   //res.send(req.body)
 })
+
+app.delete('/farms/:id', async (req, res) => {
+  const { id } = req.params;
+  console.log("Deleting Farm id ==>", id);
+  const farm = await Farm.findByIdAndDelete(id);
+  res.redirect('/farms');
+});
 
 //PRODUCT ROUTES
 

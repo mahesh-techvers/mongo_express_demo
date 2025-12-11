@@ -52,11 +52,11 @@
 
                             <div class="d-flex justify-content-center gap-2">
                                 <a href="/farms" class="btn btn-outline-secondary btn-sm">Back to Farms</a>
-                                <!-- <a href="/farms/<%= farm._id %>/edit" class="btn btn-warning btn-sm">Edit Farm</a>
+                                <!-- <a href="/farms/<%= farm._id %>/edit" class="btn btn-warning btn-sm">Edit Farm</a> -->
 
-              <form action="/farms/<%= farm._id %>?_method=delete" method="post" class="d-inline">
-                <button type="submit" class="btn btn-danger btn-sm">Delete Farm</button>
-              </form> -->
+                                <form action="/farms/<%= farm._id %>?_method=DELETE" method="POST" class="d-inline">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete Farm</button>
+                                </form>
                             </div>
                         </div>
                     </div>
